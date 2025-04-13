@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/main.css">
+    <title>Login</title>
+</head>
+<body>
+    <!-- Fundo com blur -->
+    <div class="fundo-blur"></div>
+    
+    <div class="Login">
+      <form  method="POST" action="/login">
+
+        <div class="name_login">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+          </svg>
+          <h1 class="login_">Login</h1>
+        </div>
+
+
+        <input type="text" placeholder="E-mail"  class="usuario" name="email" required>
+        <input type="password" placeholder="senha" class="senha" name="senha" required>
+        {% if mensagem %}
+          <p id="mensagem">{{ mensagem }}</p>
+        {% endif %}
+        <button type="submit" class="butao">Entrar</button>
+      </form>
+    </div>
+</body>
+</html>

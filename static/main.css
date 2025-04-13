@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    margin: auto;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .Login {
+    /* Cor com transparência para permitir o efeito no background */
+    background-color: rgba(150, 0, 0, 0.3);
+    /* Aplica o blur somente no que estiver atrás deste elemento */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    width: 370px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    border-radius: 17px;
+    /* Importante: se o elemento tiver bordas arredondadas, o efeito será respeitado */
+    overflow: hidden;
+  }
+
+  form {
+    text-align: center;
+    display: inline-block;
+    padding: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .usuario, .senha {
+    width: 90%;
+    height: 15px;
+    border-radius: 22px;
+    padding: 12px;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  .butao {
+    margin-top: 10px;
+    width: 97%;
+    height: 40px;
+    border-radius: 22px;
+    outline: 0;
+    border: none;
+    color: white;
+    background-color: #910000;
+    box-shadow: 0 0 3px #b20000, 0 0 10px #e50000;
+    cursor: pointer;
+    font-weight: bold;
+    animation: brilhoPulsando 2.1s infinite;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .butao:hover {
+    transform: scale(1.05);
+    background-color: #ff0000;
+    box-shadow: 0 0 3px #b20000, 0 0 10px #e50000;
+  }
+
+  @keyframes brilhoPulsando {
+    45%  { box-shadow: 0 0 3px #bb0000, 0 0 10px #bb0000; }
+    75%  { box-shadow: 0 0 3px #bb0000, 0 0 15px #bb0000; }
+    100%  { box-shadow: 0 0 5px #bb0000, 0 0 20px #bb0000; }
+  }
+
+  .name_login {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 12px;
+  }
+
+  .name_login svg {
+    width: 30px;
+    height: 30px;
+    color: white;
+    margin-right: 8px;
+  }
+  .fundo-blur {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://img.freepik.com/fotos-gratis/fundo-de-textura-de-tinta-de-marmoreacao-liquida-textura-abstrata-de-pintura-fluida-papel-de-parede-de-mistura-de-cores-intensiva_1258-90764.jpg?t=st=1744408791~exp=1744412391~hmac=8a648d6d1969856372946d83bb345d785d8ccc85516f08ba583b3c9b4facf471&w=1380");
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: 0;
+  }
+  /* Estilo para a mensagem de erro ou sucesso */
+  #mensagem {
+      color: rgb(255, 0, 0);
+      margin-top: 5px;
+      animation: colorrgb 2.5s infinite linear;
+  }
+
+  @keyframes colorrgb {
+   10% {color: rgb(255, 0, 0);}
+   30% {color: rgb(0, 255, 13);}
+   60% {color: rgb(0, 102, 255);}
+   80% {color: rgb(255, 0, 221);}
+   100% {color: rgb(251, 255, 0);}
+  }
